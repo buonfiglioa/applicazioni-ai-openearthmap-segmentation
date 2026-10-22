@@ -1,0 +1,24 @@
+# uv environment
+.venv/
+
+# Dataset (downloaded from Hugging Face by the notebook)
+data/
+
+# Training artifacts
+logs/
+lightning_logs/
+checkpoints/
+val_samples/
+*.ckpt
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Local-only files (not part of the published project)
+.claude/
+*.zip
+L113_A.ipynb
+L113_B.ipynb
+L115_A_2.ipynb
+L115_B_2_local.ipynb
