@@ -27,8 +27,8 @@ This project builds and evaluates a complete segmentation pipeline on OpenEarthM
 
 | File | Content |
 |---|---|
-| [`L115_B_2.ipynb`](L115_B_2.ipynb) | Executed notebook: data pipeline, model, exploratory analysis, ablation study (E0–E4), results and discussion |
-| [`Relazione_L115_B_2.pdf`](Relazione_L115_B_2.pdf) | Short report (in Italian) |
+| [`openearthmap_segmentation.ipynb`](openearthmap_segmentation.ipynb) | Executed notebook: data pipeline, model, exploratory analysis, ablation study (E0–E4), results and discussion |
+| [`relazione_openearthmap_segmentation.pdf`](relazione_openearthmap_segmentation.pdf) | Short report (in Italian) |
 | [`results/`](results) | Metrics, per-class IoU, confusion matrix and learning curves of each experiment (JSON) |
 | `pyproject.toml`, `uv.lock` | Exact Python environment |
 
@@ -55,13 +55,13 @@ The best model, SegFormer `mit_b2`, reaches a test mIoU of **0.688** (0.653 over
 - Each configuration was trained with a single seed.
 - Validation and test come from the same regions, so generalization to unseen cities was not measured.
 
-The [report](Relazione_L115_B_2.pdf) and the notebook discuss both points.
+The [report](relazione_openearthmap_segmentation.pdf) and the notebook discuss both points.
 
 ## Reproduce
 
 ```bash
 uv sync                      # create the environment
-uv run jupyter lab           # open L115_B_2.ipynb
+uv run jupyter lab           # open openearthmap_segmentation.ipynb
 ```
 
 The first cell downloads the dataset (about 6.4 GB) from the Hugging Face Hub into `./data`; on Google Colab it uses `/content`. Training all five experiments took about 3 hours on an RTX 3080 Laptop GPU (16 GB). Results are cached in `results/`, so experiments already present are skipped when the notebook is re-run.

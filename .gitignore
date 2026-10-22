@@ -18,6 +18,7 @@ __pycache__/
 # Local-only files (not part of the published project)
 .claude/
 *.zip
+s362027_Applicazioni-AI_assignment.zip
 L113_A.ipynb
 L113_B.ipynb
 L115_A_2.ipynb
